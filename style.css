@@ -23,20 +23,26 @@ body {
   background: var(--body-color);
   transition: background 0.3s;
 }
-.logo {
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 5%;
+}
+/*.logo {
   width: 160px;
   margin-right: 45px;
-}
+}*/
 
 nav {
   display: flex;
-  position: sticky;
+  position:relative;
   top: 0;
   z-index: 100;
   align-items: center;
   justify-content: space-between;
   background: var(--nav-color);
   padding: 5px 5%;
+  width: 100%;
 }
 
 .nav-left,
@@ -46,7 +52,7 @@ nav {
 }
 .nav-left ul li {
   list-style: none;
-  display: inline-block;
+  display: inline;
 }
 .nav-left ul li img {
   width: 28px;
@@ -57,6 +63,10 @@ nav {
   border-radius: 50%;
   cursor: pointer;
   vertical-align: middle;
+}
+.nav logo {
+  width: 160px;
+  margin-right: 45px;
 }
 
 .nav-user-icon {
@@ -97,11 +107,7 @@ nav {
   top: 0;
   right: 0;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 5%;
-}
+
 .left-sidebar {
   flex-basis: 25%;
   position: sticky;
@@ -559,6 +565,41 @@ nav {
 .volunteer-opportunities {
   margin: 2rem 0;
 }
+.friend-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.friend-photo {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.friend-name {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+.friends-main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
 
 /* _____________media query for small devices______________________________________________________________________________________________________________________________ */
 
@@ -664,24 +705,4 @@ nav {
     outline: none;
     border: 1px solid #ccc;
   }
-}
-.friend-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.friend-photo {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.friend-name {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #333;
 }
