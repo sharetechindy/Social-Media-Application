@@ -25,3 +25,16 @@ darkBtn.onclick = function() {
     }
 }
 
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.scrolly-section');
+    const scrollPosition = window.scrollY;
+
+    sections.forEach((section, index) => {
+        if (scrollPosition >= index * window.innerHeight && scrollPosition < (index + 1) * window.innerHeight) {
+            section.style.opacity = 1;
+        } else {
+            section.style.opacity = 0.5;
+        }
+    });
+});
+
