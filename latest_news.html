@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaithHub::Latest News</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <nav>
@@ -12,7 +13,32 @@
     </nav>
     <div class="container">
         <h1>Latest News</h1>
-        <!-- Add news content here -->
+        <button type="button" onclick="fetchLocalNews()">More News</button>
     </div>
+    <div id="news-content" class="news-grid">
+        <!-- News content will be displayed here -->
+    </div>
+    <script>
+        async function fetchLocalNews() {
+            const response = await fetch('https://newsdata.io/api/1/news?apikey=pub_65662bf9e34ce75c0209aa4da07d5758b8aa2&country=us&language=en', {
+                headers: {
+                    'x-api-key': 'pub_65662bf9e34ce75c0209aa4da07d5758b8aa2' 
+                }
+            });
+            const data = await response.json();
+            const newsContent = document.getElementById('news-content');
+            newsContent.innerHTML = '';
+            data.results.forEach(article => {
+                const newsItem = document.createElement('div');
+                newsItem.classList.add('news-item');
+                newsItem.innerHTML = `<img src="${article.image_url}" alt="${article.title}"><h2>${article.title}</h2><p>${article.description}</p>`;
+                newsContent.appendChild(newsItem);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchLocalNews();
+        });
+    </script>
 </body>
 </html>
