@@ -23,6 +23,10 @@ body {
   background: var(--body-color);
   transition: background 0.3s;
 }
+.logo {
+  width: 160px;
+  margin-right: 45px;
+}
 
 nav {
   display: flex;
@@ -34,10 +38,7 @@ nav {
   background: var(--nav-color);
   padding: 5px 5%;
 }
-.logo {
-  width: 160px;
-  margin-right: 45px;
-}
+
 .nav-left,
 .Nav-right {
   display: flex;
@@ -55,6 +56,7 @@ nav {
   width: 40px;
   border-radius: 50%;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .nav-user-icon {
@@ -498,4 +500,111 @@ nav {
 #dark-btn.dark-btn-on {
   padding-left: 23px;
   background: #5b34e9;
+}
+.daily-bible-verse-container a {
+  text-decoration: none;
+  color: #5b34e9; /* This will make the link color inherit the color of its parent */
+}
+@media (min-width: 340px) and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .left-sidebar,
+  .right-sidebar,
+  .main-content {
+    flex-basis: 100%;
+    position: relative;
+  }
+  .left-sidebar {
+    order: 1;
+  }
+  .main-content {
+    order: 2;
+    justify-content: center;
+  }
+  .right-sidebar {
+    order: 3;
+  }
+  .story-gallery {
+    display: flex;
+  }
+  .write-post-container {
+    padding: 10px;
+  }
+  .post-input-container {
+    padding-left: 0;
+  }
+  .post-container {
+    padding: 10px;
+  }
+  .daily-bible-verse-container {
+    padding: 10px;
+    margin-top: 70px;
+  }
+  .footer {
+    padding: 10px 0;
+  }
+  .settings-menu {
+    right: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  .settings-menu-inner {
+    padding: 10px;
+  }
+  .settings-menu a {
+    padding: 10px 0;
+  }
+  .settings-links {
+    margin: 10px 0;
+  }
+  .settings-links .settings-icon {
+    width: 30px;
+  }
+  .settings-links a {
+    font-size: 12px;
+  }
+  .settings-menu hr {
+    margin: 10px 0;
+  }
+  .settings-menu-height {
+    max-height: 1000px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    align-items:center;
+    justify-content: space-between;
+    background: var(--nav-color);
+    padding: 5px 5%;
+  }
+  .logo {
+    width: 120px;
+    margin-right: 15px;
+  }
+  .search-box {
+    background: #efefef;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .search-box img {
+    width: 18px;
+  }
+  .search-box input {
+    background: transparent;
+    width: 100%;
+  
+    align-items: center;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+  }
 }
