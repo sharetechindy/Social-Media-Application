@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>FaithHub::Index</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/ecfba5801e.js"
@@ -108,18 +109,40 @@
       <!-------main content--------------->
       <div class="main-content">
         <div class="daily-bible-verse-container">
-          <a href="https://www.verseoftheday.com">
-            <h4>Daily Bible Verse:</h4>
-          </a>
-          <blockquote cite="https://www.verseoftheday.com/">
-            <i>Therefore, since we have been justified through faith,
-               we have peace with God through our Lord Jesus Christ, 
-               through whom we have gained access by faith into this 
-               grace in which we now stand. And we rejoice in the hope
-                of the glory of God.
-              —Romans 5:1-2</i>
-          </blockquote>
+          <div>
+            <h1  class="text-primary">Daily Bible Verse</h1>
+            <p>&nbsp;</p>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                
+              </div>
+            </div>
+            <p>&nbsp;</p>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                <div>
+                  <p class="text-info" id="newQuote"></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+
+              </div>
+            </div>
+          </div>
+          <p>&nbsp;</p>
+          <div align="center" id="spinner" v-if="isLoading">
+            <img
+              src="https://www.miamidade.gov/propertysearch/images/ajax-loader.gif"
+              alt="Loading..."
+              width="70"
+              height="40"
+            />
+          </div>
         </div>
+        
         <div class="story-gallery">
           <div class="story story1">
             <img src="images/images/upload.png" alt="" />
@@ -386,6 +409,7 @@
     </div>
     <div class="footer">
       <p>Copyright &copy; 2025 FaithHub-Sharetech. All Rights Reserved</p>
+     
     <script src="script.js"></script>
   </body>
 </html>

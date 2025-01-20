@@ -514,6 +514,10 @@ nav {
   text-decoration: none;
   color: #5b34e9; 
 }
+.verse-container {
+  font-size: 14px;
+  color: #626262;
+}
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
