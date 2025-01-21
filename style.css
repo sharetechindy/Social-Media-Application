@@ -514,9 +514,9 @@ nav {
   text-decoration: none;
   color: #5b34e9; 
 }
-.verse-container {
-  font-size: 14px;
-  color: #626262;
+.daily-bible-verse-container h3 {
+  font-size: 20px;
+  color: #0c0c0c;
 }
 .news-grid {
   display: grid;
@@ -610,7 +610,7 @@ nav {
 
 /* _____________media query for small devices______________________________________________________________________________________________________________________________ */
 
-@media (min-width: 340px) and (max-width: 768px) {
+@media (min-width: 200px) and (max-width: 768px) {
   .container {
     flex-wrap: wrap;
   }

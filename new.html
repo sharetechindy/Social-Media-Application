@@ -7,87 +7,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    <style>
-      body {
-        font-size: 2em;
-      }
-    </style>
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
   </head>
   <body>
-    <div class="container">
-      <h1 align="center" class="text-primary">Random Bible Verse</h1>
-      <p>&nbsp;</p>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <p>
-            Welcome! Utilizing the
-            <a href="http://labs.bible.org/api_web_service" target="_blank"
-              >Bible.org</a
-            >
-            random verse API, this page will load a random verse. Clicking the
-            button below will fetch a new random Bible verse. Enjoy!
-          </p>
-        </div>
-      </div>
-      <p>&nbsp;</p>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div>
-            <p class="text-info" id="newQuote"></p>
-            <p></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div align="center">
-            <button class="btn btn-primary">New Verse</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p>&nbsp;</p>
-    <div align="center" id="spinner" v-if="isLoading">
-      <img
-        src="https://www.miamidade.gov/propertysearch/images/ajax-loader.gif"
-        alt="Loading..."
-        width="70"
-        height="40"
-      />
-    </div>
-    <script>
-      (function () {
-        $(document).ready(function () {
-          getVerse();
-        });
-
-        $("button").click(function () {
-          getVerse();
-        });
-
-        var getVerse = function () {
-          $("#spinner").show();
-          $.ajax({
-            url: "https://labs.bible.org/api/?passage=random&type=json&callback=myCallback",
-            crossDomain: true,
-            dataType: "jsonp",
-            success: function (result) {
-              $("#newQuote").html(
-                "<strong>" +
-                  result[0].bookname +
-                  " " +
-                  result[0].chapter +
-                  ":" +
-                  result[0].verse +
-                  "</strong> " +
-                  result[0].text
-              );
-              $("#spinner").hide();
-            },
-          });
-        };
-      })();
-    </script>
+   
   </body>
 </html>
