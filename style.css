@@ -1,6 +1,10 @@
 /*_____media query for mobile devices____ */
 
-@media only screen and (min-width: 340px) and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
   * {
     margin: 0;
     padding: 0;
@@ -22,59 +26,64 @@
   body {
     background: var(--body-color);
     transition: background 0.3s;
+    
   }
   .container {
-    display: flex-box;
+    display: flex;
     justify-content: space-between;
     padding: 13px 5%;
   }
 
   nav {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     position: relative;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     align-items: center;
     justify-content: space-between;
     background: var(--nav-color);
-    padding: 5px 5%;
-    width: 100%;
+    width:100vw;
+    border-bottom: 1px solid #ccc;
   }
 
   .nav-left,
   .Nav-right {
-    display: inline;
+    display: flex;
     align-items: center;
   }
+
   .nav-left ul li {
     list-style: none;
     display: inline;
   }
   .nav-left ul li img {
     width: 28px;
-    margin: 0 10px;
+    margin: 0px;
   }
   .nav-user-icon img {
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
     vertical-align: top;
+    margin-right: auto;
   }
   .logo {
     width: 130px;
-    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .nav-user-icon {
-    margin-left: 5px;
+    margin-right: 5px;
   }
   .search-box {
     background: #efefef;
-    width: 100px;
+    width: 200px;
     border-radius: 20px;
     display: flex;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 5px;
   }
   .search-box img {
     width: 18px;
@@ -99,21 +108,21 @@
     border: 2px solid #fff;
     border-radius: 50%;
     background: #41db51;
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
   }
 
   .left-sidebar {
     flex-basis: 25%;
-    position: sticky;
+    position: inherit;
     top: 70px;
     align-self: flex-start;
   }
 
   .right-sidebar {
     flex-basis: 25%;
-    position: sticky;
+    position: inherit;
     top: 70px;
     align-self: flex-start;
     background: var(--bg-color);
@@ -293,7 +302,7 @@
     width: 100%;
     background: var(--bg-color);
     border-radius: 0px;
-    padding: 20px;
+    padding: 5px;
     color: #626262;
     border-bottom: 2px solid #c7c1c1;
   }
@@ -319,7 +328,7 @@
     color: #626262;
   }
   .post-input-container {
-    padding-left: 55px;
+    padding-left: 30px;
     padding-top: 20px;
   }
   .post-input-container textarea {
@@ -330,7 +339,7 @@
     background: transparent;
   }
   .add-post-links {
-    display: flex;
+    display: inline-flex;
     margin-top: 10px;
   }
   .add-post-links a {
@@ -343,7 +352,7 @@
   }
   .add-post-links a img {
     width: 20px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   .post-container {
     width: 95%;
@@ -630,17 +639,17 @@
     transition: background 0.3s;
   }
   .container {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     padding: 13px 5%;
   }
 
   nav {
-    display: flex;
+    display: inline-flex;
     z-index: 100;
-    position:relative;
+    position: fixed;
     top: 0;
-  
+    left:0;
     align-items: center;
     justify-content: space-around;
     background: var(--nav-color);
@@ -681,7 +690,7 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    padding: 0 ;
+    padding: 0;
   }
   .search-box img {
     width: 18px;
@@ -1115,7 +1124,7 @@
     padding-left: 23px;
     background: #5b34e9;
   }
-  
+
   .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

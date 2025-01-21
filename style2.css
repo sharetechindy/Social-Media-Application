@@ -1,0 +1,140 @@
+/*body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.scrolly-container {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+#section1 {
+    background-color: #ff9999;
+}
+
+#section2 {
+    background-color: #99ccff;
+}
+
+#section3 {
+    background-color: #99ff99;
+}
+
+#section4 {
+    background-color: #ffcc99;
+}
+*/
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-left ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-left ul li {
+    list-style: none;
+    margin-right: 10px;
+  }
+  
+  .nav-left ul li img {
+    width: 28px;
+    margin: 0;
+  }
+  
+  .nav-user-icon img {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: top;
+  }
+  
+  .logo {
+    width: 130px;
+    margin-right: 10px;
+  }
+  
+  .nav-user-icon {
+    margin-left: auto;
+  }
+  
+  .search-box {
+    background: #efefef;
+    width: 150px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
+  
+  .search-box img {
+    width: 18px;
+  }
+  
+  .search-box input {
+    background: transparent;
+    width: 100%;
+    align-items: center;
+    padding: 0.5rem;
+    outline: none;
+    border: 0;
+  }
+  
+  .online {
+    position: relative;
+  }
+  
+  .online::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .nav-left ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-left ul li {
+      list-style: none;
+      margin-right: 10px;
+    }
+    .nav-user-icon {
+      margin-left: auto;
+    }
+  }
+  
