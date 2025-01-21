@@ -403,7 +403,7 @@ nav {
   justify-self: center;
 }
 .daily-bible-verse-container h4 {
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 .post-profile-icon {
   display: flex;
@@ -608,9 +608,9 @@ nav {
   margin-top: 20px;
 }
 
-/* _____________media query for small devices______________________________________________________________________________________________________________________________ */
+/*_____media query for mobile devices____ */
 
-@media (min-width: 200px) and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .container {
     flex-wrap: wrap;
   }
@@ -713,3 +713,11 @@ nav {
     border: 1px solid #ccc;
   }
 }
+/* Styles for tablets */
+@media only screen and (min-width: 601px) and (max-width:768px) {}
+/* Styles for desktop */
+@media only screen and (min-width: 769px) and (max-width:1024px) {}
+/* Styles for large desktop */
+@media only screen and (min-width: 1025px) and (max-width:1200px) {}
+/* Styles for extra large desktop */
+@media only screen and (min-width: 1201px) {}
