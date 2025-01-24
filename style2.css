@@ -47,7 +47,7 @@
 
 
 :root{
-  --body-color: #c0b4b4;
+  --body-color: #ffffff;
   --nav-color: #5b34e9;
   --bg-color: #fff;
   --primary-color: #edf2fc;
@@ -132,28 +132,28 @@ nav{
   background: #41db51;
   position: absolute;
 }
-nav2 {
+.nav2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--nav2-color);
+  background: #e4850a;
   padding: 5px 5%;
   position: sticky;
   top: 0;
   z-index: 100;
   display: none;
 }
-nav2 ul li{
+.nav2 ul li{
   list-style: none;
   display: inline-block;
   margin-right: 20px;
 }
-nav2 ul li a{
+.nav2 ul li a{
   text-decoration: none;
   color: #fff;
   font-size: 14px;
 }
-nav2 ul li img{
+.nav2 ul li img{
   width: 20px;
   margin-right: 5px;
 }
@@ -316,6 +316,7 @@ nav2 ul li img{
   background-size: cover;
   background-position: center;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .story1{
   background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(images/status-1.png);
@@ -770,6 +771,16 @@ nav2 ul li img{
   .nav-user-icon{
       margin-left: 0;
   }
+  .story {
+    flex-basis: 18%;
+    padding-top: 32%;
+    position: relative;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(images/images/status-1.png);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
   .story img{
       width: 30px;
       border-width: 3px;
@@ -780,6 +791,14 @@ nav2 ul li img{
   .story.story1 img{
       width: 25px;
       bottom: 30px;
+  }
+  .daily-bible-verse-container a {
+    text-decoration: none;
+    color: #5b34e9;
+  }
+  .daily-bible-verse-container h3 {
+    font-size: 20px;
+    color: #0c0c0c;
   }
   .post-input-container{
       padding-left: 0;
@@ -792,30 +811,31 @@ nav2 ul li img{
       width: 16px;
       margin-right: 5px;
   }
-  nav2 {
+  .nav2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--nav2-color);
     padding: 5px 5%;
-    position: static;
+    position: sticky;
     top: 0;
-    z-index: 100;
-    
+    z-index: 99;
+    width:100%;
+    bottom: 0;
   }
-  nav2 ul li{
+  .nav2 ul li{
     list-style: none;
     display: inline-block;
     margin-right: 20px;
   }
-  nav2 ul li a{
+  .nav2 ul li a{
     text-decoration: none;
     color: #fff;
     font-size: 14px;
   }
-  nav2 ul li img{
+  .nav2 ul li img{
     width: 20px;
-    margin-right: 5px;
+    margin-right: 20px;
   }
 }
 
