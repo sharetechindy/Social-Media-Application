@@ -797,6 +797,9 @@ nav{
   .post-col{
       flex-basis: 100%;
   }
+  nav{
+    flex-wrap: nowrap;
+}
 }
 
 
