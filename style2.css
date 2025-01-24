@@ -710,7 +710,7 @@ nav{
 
 @media (max-width:900px){
   nav{
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
   }
   .add-post-links{
       flex-wrap: wrap;
