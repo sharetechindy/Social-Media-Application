@@ -29,6 +29,7 @@
     justify-content: space-between;
     padding: 13px 5%;
   }
+  
 
   nav {
     display: flex;
@@ -120,6 +121,7 @@
     padding: 20px;
     border-radius: 4px;
     color: #626262;
+    flex-direction: column;
   }
   .main-content {
     flex-basis: 47%;

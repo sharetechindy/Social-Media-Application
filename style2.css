@@ -47,7 +47,7 @@
 
 
 :root{
-  --body-color: #efefef;
+  --body-color: #c0b4b4;
   --nav-color: #5b34e9;
   --bg-color: #fff;
   --primary-color: #edf2fc;
@@ -75,6 +75,7 @@ nav{
   top: 0;
   z-index: 100;
 }
+
 .logo{
   width: 160px;
   margin-right: 45px;
@@ -130,6 +131,31 @@ nav{
   top: 0;
   background: #41db51;
   position: absolute;
+}
+nav2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--nav2-color);
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: none;
+}
+nav2 ul li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+nav2 ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+nav2 ul li img{
+  width: 20px;
+  margin-right: 5px;
 }
 .container{
   padding: 13px 5%;
@@ -711,6 +737,7 @@ nav{
 @media (max-width:900px){
   nav{
       flex-wrap: nowrap;
+      display:flex;
   }
   .add-post-links{
       flex-wrap: wrap;
@@ -735,6 +762,7 @@ nav{
   .nav-left ul li img{
       width: 20px;
       margin: 0 8px;
+      display:none;
   }
   .nav-user-icon img{
       width: 30px;
@@ -763,6 +791,31 @@ nav{
   .add-post-links a img {
       width: 16px;
       margin-right: 5px;
+  }
+  nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--nav2-color);
+    padding: 5px 5%;
+    position: static;
+    top: 0;
+    z-index: 100;
+    
+  }
+  nav2 ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav2 ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+  }
+  nav2 ul li img{
+    width: 20px;
+    margin-right: 5px;
   }
 }
 
