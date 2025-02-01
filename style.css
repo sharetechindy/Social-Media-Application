@@ -1386,7 +1386,7 @@
     font-size: 14px;
     margin-bottom: 20px;
   }
-  .left-event {
+  .event-left {
     border-radius: 10px;
     height: 65px;
     width: 65px;
@@ -1405,7 +1405,7 @@
     text-decoration: none;
     color: #5b34e9;
   }
-  .left-event span {
+  .event-left span {
     position: absolute;
     bottom: 0;
     left: 0;
