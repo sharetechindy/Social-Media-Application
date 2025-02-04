@@ -710,9 +710,14 @@ nav {
   nav {
     flex-wrap: nowrap;
     display: flex;
+    height: 6vh;
+    padding:2%;
   }
   .add-post-links {
     flex-wrap: wrap;
+  }
+  .nav-left {
+    padding:0;
   }
 
   .left-sidebar {
@@ -725,12 +730,13 @@ nav {
     flex-basis: 100%;
   }
   .logo {
-    width: 110px;
-    margin-right: 20px;
+    width: 25vw;
+    margin-right: 5px;
   }
   .search-box {
     display: flex;
     width:50vw;
+    height:3vh;
   }
   .nav-left ul li img {
     width: 20px;
