@@ -711,17 +711,18 @@ nav {
     flex-wrap: nowrap;
     display: flex;
     height: 6vh;
-    padding:2%;
+    padding: 2%;
   }
   .add-post-links {
     flex-wrap: wrap;
   }
   .nav-left {
-    padding:0;
+    padding: 0;
   }
 
   .left-sidebar {
     display: none;
+    flex-wrap: wrap;
   }
   .right-sidebar {
     display: none;
@@ -735,8 +736,8 @@ nav {
   }
   .search-box {
     display: flex;
-    width:50vw;
-    height:3vh;
+    width: 50vw;
+    height: 3vh;
   }
   .nav-left ul li img {
     width: 20px;
@@ -749,7 +750,7 @@ nav {
   .nav-user-icon {
     margin-left: 0;
   }
-  
+
   .story {
     flex-basis: 18%;
     padding-top: 32%;
@@ -793,10 +794,10 @@ nav {
   .nav2 {
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     background: var(--nav-color);
     padding: 3px 5%;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 98;
     width: 100%;

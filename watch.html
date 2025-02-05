@@ -4,71 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaithHub::Watch</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style2.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-          
-            <img src="images/images/logo.png" alt="Home" class="logo" />
-        
-        
-          
-          <ul>
-            <li><img src="images/images/notification.png" alt="" /></li>
-            <li><img src="images/images/inbox.png" alt="" /></li>
-            <li><img src="images/images/video.png" alt="" /></li>
-          </ul>
+  <nav>
+    <div class="nav-left">
+      <img src="images/images/logo.png" alt="logo" class="logo" />
+      <ul>
+        <li>
+          <a href="index.html"><img src="images/images/home.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="notifications.html"
+            ><img src="images/images/notification.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="mail.html"><img src="images/images/inbox.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="watch.html"
+            ><img src="images/images//video.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <img src="images/images/search.png" alt="" />
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+    <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+      <img src="images/images/profile-pic.png" alt="Profile pic" />
+    </div>
+    <!-------settings-menu--------------->
+    <div class="settings-menu">
+      <p>Dark Mode</p>
+
+      <div id="dark-btn" class="dark-btn-on"><span></span></div>
+      <div class="settings-menu-inner">
+        <div class="user-profile">
+          <img src="images/images/profile-pic.png" alt="" />
+          <div>
+            <p>John Nicolson</p>
+            <a href="profile.html">See your profile</a>
+          </div>
         </div>
-        <div class="nav-right">
-          <div class="search-box">
-            <img src="images/images/search.png" alt="" />
-            <input type="text" placeholder="Search here" />
+        <hr />
+        <div class="user-profile">
+          <img src="images/images/feedback.png" alt="" />
+          <div>
+            <p>Give Feedback</p>
+            <a href="#">Help us to improve</a>
           </div>
-          
         </div>
-        <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-            <img src="images/images/profile-pic.png" alt="" />
-          </div>
-        <!-------settings-menu--------------->
-        <div class="settings-menu">  
-          <div id="dark-btn" class="dark-btn-on" >
-            <span></span> 
-          </div>
-          <div class="settings-menu-inner">
-            <div class="user-profile">
-              <img src="images/images/profile-pic.png" alt="" />
-              <div>
-                <p>John Nicolson</p>
-                <a href="#">See your profile</a>
-              </div>
-            </div>
-            <hr>
-            <div class="user-profile">
-              <img src="images/images/feedback.png" alt="" />
-              <div>
-                <p>Give Feedback</p>
-                <a href="#">Help us to improve</a>
-              </div>
-            </div>
-            <hr>
-              <div class="settings-links">
-                <img src="images/images/setting.png" alt="User" class="settings-icon" />
-                <a href="#">Settings & Privacy<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/help.png" alt="User" class="settings-icon" />
-                <a href="#">Help & Support<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/display.png" alt="User" class="settings-icon" />
-                <a href="#">Display & accessability<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/logout.png" alt="User" class="settings-icon" />
-                <a href="#">Logout<img src="images/images/arrow.png" alt="" /></a>
-              </div>  
-            </nav>
+        <hr />
+        <div class="settings-links">
+          <img
+            src="images/images/setting.png"
+            alt="User"
+            class="settings-icon"
+          />
+          <a href="#"
+            >Settings & Privacy<img src="images/images/arrow.png" alt=""
+          /></a>
+        </div>
+        <div class="settings-links">
+          <img
+            src="images/images/help.png"
+            alt="User"
+            class="settings-icon"
+          />
+          <a href="#"
+            >Help & Support<img src="images/images/arrow.png" alt=""
+          /></a>
+        </div>
+        <div class="settings-links">
+          <img
+            src="images/images/display.png"
+            alt="User"
+            class="settings-icon"
+          />
+          <a href="#"
+            >Display & accessibility<img src="images/images/arrow.png" alt=""
+          /></a>
+        </div>
+        <div class="settings-links">
+          <img
+            src="images/images/logout.png"
+            alt="User"
+            class="settings-icon"
+          />
+          <a href="#">Logout<img src="images/images/arrow.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav2 class="nav2">
+    <ul>
+      
+      
+      <li>
+          <a href="index.html"><img src="images/images/home.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="notifications.html"
+            ><img src="images/images/notification.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="mail.html"><img src="images/images/inbox.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="watch.html"
+            ><img src="images/images//video.png" alt=""
+          /></a>
+        </li>
+    </ul>
+  </nav2>
+
     <div class="container">
         <h1>Watch</h1>
         <!-- Add watch content here -->
