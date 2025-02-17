@@ -53,7 +53,7 @@ document.addEventListener("scroll", () => {
   var getVerse = function () {
     $("#spinner").show();
     $.ajax({
-      url: "https://labs.bible.org/api/?passage=random&type=json&callback=myCallback",
+      url: "https://labs.bible.org/api/?passage=votd&type=json&callback=myCallback",
       crossDomain: true,
       dataType: "jsonp",
       success: function (result) {
