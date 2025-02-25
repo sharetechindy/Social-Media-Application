@@ -8,96 +8,136 @@
     
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-          
-            <img src="images/images/logo.png" alt="Home" class="logo" />
+  <nav>
+    <div class="nav-left">
+      <img src="images/images/logo.png" alt="logo" class="logo" />
+      <ul>
+        <li><a href="index.html"><img src="images/images/home.png" alt="" /></a></li>
+        <li><a href="notifications.html"><img src="images/images/notification.png" alt="" /></a></li>
+        <li><a href="mail.html"><img src="images/images/inbox.png" alt="" /></a></li>
+        <li><a href="watch.html"><img src="images/images//video.png" alt="" /></a></li>
+        
+      </ul>
+    </div>
+    
+    <div class="nav-right">
+      <div class="search-box">
+        <img src="images/images/search.png" alt="" />
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+    <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+      <img src="images/images/profile-pic.png" alt="Profile pic" />
+    </div>
+    <!-------settings-menu--------------->
+    <div class="settings-menu">
+      <p>Dark Mode</p>
         
         
-          
-          <ul>
-            <li><img src="images/images/notification.png" alt="" /></li>
-            <li><img src="images/images/inbox.png" alt="" /></li>
-            <li><img src="images/images/video.png" alt="" /></li>
-          </ul>
+      <div id="dark-btn" class="dark-btn-on"><span></span></div>
+      <div class="settings-menu-inner">
+        <div class="user-profile">
+          <img src="images/images/profile-pic.png" alt="" />
+          <div>
+            <p>John Nicolson</p>
+            <a href="profile.html">See your profile</a>
+          </div>
         </div>
-        <div class="nav-right">
-          <div class="search-box">
-            <img src="images/images/search.png" alt="" />
-            <input type="text" placeholder="Search here" />
+        <hr>
+        <div class="user-profile">
+          <img src="images/images/feedback.png" alt="" />
+          <div>
+            <p>Give Feedback</p>
+            <a href="#">Help us to improve</a>
           </div>
-          
         </div>
-        <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-            <img src="images/images/profile-pic.png" alt="" />
-          </div>
-        <!-------settings-menu--------------->
-        <div class="settings-menu">  
-          <div id="dark-btn" class="dark-btn-on" >
-            <span></span> 
-          </div>
-          <div class="settings-menu-inner">
-            <div class="user-profile">
-              <img src="images/images/profile-pic.png" alt="" />
-              <div>
-                <p>John Nicolson</p>
-                <a href="#">See your profile</a>
-              </div>
-            </div>
-            <hr>
-            <div class="user-profile">
-              <img src="images/images/feedback.png" alt="" />
-              <div>
-                <p>Give Feedback</p>
-                <a href="#">Help us to improve</a>
-              </div>
-            </div>
-            <hr>
-              <div class="settings-links">
-                <img src="images/images/setting.png" alt="User" class="settings-icon" />
-                <a href="#">Settings & Privacy<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/help.png" alt="User" class="settings-icon" />
-                <a href="#">Help & Support<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/display.png" alt="User" class="settings-icon" />
-                <a href="#">Display & accessability<img src="images/images/arrow.png" alt="" /></a>
-              </div>
-              <div class="settings-links">
-                <img src="images/images/logout.png" alt="User" class="settings-icon" />
-                <a href="#">Logout<img src="images/images/arrow.png" alt="" /></a>
-              </div>  
-            </nav>
-    <div class="container">
+        <hr>
+        <div class="settings-links">
+          <img src="images/images/setting.png" alt="User" class="settings-icon" />
+          <a href="#">Settings & Privacy<img src="images/images/arrow.png" alt="" /></a>
+        </div>
+        <div class="settings-links">
+          <img src="images/images/help.png" alt="User" class="settings-icon" />
+          <a href="#">Help & Support<img src="images/images/arrow.png" alt="" /></a>
+        </div>
+        <div class="settings-links">
+          <img src="images/images/display.png" alt="User" class="settings-icon" />
+          <a href="#">Display & accessibility<img src="images/images/arrow.png" alt="" /></a>
+        </div>
+        <div class="settings-links">
+          <img src="images/images/logout.png" alt="User" class="settings-icon" />
+          <a href="#">Logout<img src="images/images/arrow.png" alt="" /></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav2 class="nav2">
+    <ul>
+          
+          
+      <li>
+          <a href="index.html"><img src="images/images/home.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="notifications.html"
+            ><img src="images/images/notification.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="mail.html"><img src="images/images/inbox.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="watch.html"
+            ><img src="images/images//video.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="groups.html"
+            ><img src="images/images//group.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="friends.html"
+            ><img src="images/images/friends.png" alt=""
+          /></a>
+    </ul>
+  
+  </nav2>
+    <div class="news-container">
         <h1>Latest News</h1>
         <button type="button" onclick="fetchLocalNews()">More News</button>
     </div>
     <div id="news-content" class="news-grid">
         <!-- News content will be displayed here -->
     </div>
-    <script>
-        async function fetchLocalNews() {
-            const response = await fetch('https://newsdata.io/api/1/news?apikey=pub_65662bf9e34ce75c0209aa4da07d5758b8aa2&country=us&language=en', {
-                headers: {
-                    'x-api-key': 'pub_65662bf9e34ce75c0209aa4da07d5758b8aa2' 
-                }
-            });
-            const data = await response.json();
-            const newsContent = document.getElementById('news-content');
-            newsContent.innerHTML = '';
-            data.results.forEach(article => {
-                const newsItem = document.createElement('div');
-                newsItem.classList.add('news-item');
-                newsItem.innerHTML = `<img src="${article.image_url}" alt="${article.title}"><h2>${article.title}</h2><p>${article.description}</p>`;
-                newsContent.appendChild(newsItem);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            fetchLocalNews();
-        });
-    </script>
+    <script type="text/javascript">
+      async function fetchLocalNews() {
+          const response = await fetch('https://newsdata.io/api/1/news?apikey=pub_65662bf9e34ce75c0209aa4da07d5758b8aa2&country=us&language=en', {
+              headers: {
+                  'x-api-key': 'pub_65662bf9e34ce75c0209aa4da07d5758b8aa2' 
+              }
+          });
+          const data = await response.json();
+          const newsContent = document.getElementById('news-content');
+          newsContent.innerHTML = '';
+          data.results.forEach(article => {
+              const newsItem = document.createElement('div');
+              newsItem.classList.add('news-item');
+              newsItem.innerHTML = `
+                  <a href="${article.link}" target="_blank">
+                      <img src="${article.image_url || 'path/to/default-image.jpg'}" alt="${article.title}">
+                      <h2>${article.title}</h2>
+                  </a>
+                  <p>${article.description}</p>
+              `;
+              newsContent.appendChild(newsItem);
+          });
+      }
+  
+      document.addEventListener('DOMContentLoaded', () => {
+          fetchLocalNews();
+      });
+  </script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
